@@ -23,7 +23,7 @@ Support for automatic document-aware rollups to less granular dimensions is a ni
 
 **Document-Aware Aggregation Rollups**
 
-![](https://raw.githubusercontent.com/drewkerrigan/riak_ts/master/docs/rollups.jpg)
+![](https://raw.githubusercontent.com/drewkerrigan/riak_ts/master/docs/rollups.png)
 
 Although advanced features like this are possible using Riak k/v as is, there are some improvements that can be made to Riak that would make this much easier and more performant:
 
