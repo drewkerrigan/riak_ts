@@ -3,10 +3,34 @@
 
 ## Goal
 
-The goal of a time-series API on Riak is to solve a common problem faced by customers.  The API should at minimum expose a way to easily store individual events as well as a way to query for multiple events given user defined dimensions.
+The goal of a time-series API on Riak is to provide a reusable solution to a common problem faced by customers.  The problem at a high level is that there is currently no built-in way to fetch more than one Riak object given start and end parameters.
 
-Some examples of rollup dimensions are `YYYYMMDDhhmm` for one minute of data, `YYYYMM` for one month of data, etc.  A nice feature to have would be precalculated data-aware dimensions such as the sum or average value of a field in a JSON document.  The most basic implementation however, would be an iteration over many individual events effectively providing a multi-get function based on a date range.
- 
+### Minimum Features
+
+The API should at minimum expose a way to easily store individual events as well as a way to query for multiple events given start and end times.
+
+**Store an Object**
+
+![](https://raw.githubusercontent.com/drewkerrigan/riak_ts/master/docs/object.png)
+
+**Query 5 Minutes of Events**
+
+![](https://raw.githubusercontent.com/drewkerrigan/riak_ts/master/docs/query.png)
+
+### Advanced Features
+
+Support for automatic document-aware rollups to less granular dimensions is a nice-to-have feature but not required for a minimum viable product.
+
+**Document-Aware Aggregation Rollups**
+
+![](https://raw.githubusercontent.com/drewkerrigan/riak_ts/master/docs/rollups.jpg)
+
+Although advanced features like this are possible using Riak k/v as is, there are some improvements that can be made to Riak that would make this much easier and more performant:
+
+* randy
+* fill
+* this
+* in
 
 ## Background
 
