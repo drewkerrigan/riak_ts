@@ -1,0 +1,13 @@
+{ application, riak_ts,
+  [ { description, "Riak Time Series Interface" },
+    { vsn, "v0.0.1" },
+    { registered, [] },
+    { applications, [
+        kernel,
+        stdlib
+        riak_core,
+        riak_kv] },
+    {mod, { ts_app, []}},
+    { env, [] }
+  ]
+}.
